@@ -1,11 +1,11 @@
 <?php
 
-$EmailFrom = "chriscoyier@gmail.com";
+$EmailFrom = "bohmno@gmail.com";
 $EmailTo = "namhoang.td09@gmail.com";
-$Subject = "Nice & Simple Contact Form by CSS-Tricks";
+$Subject = "Get in touch";
 $Name = Trim(stripslashes($_POST['name']));
 $Email = Trim(stripslashes($_POST['email']));
-$Message = Trim(stripslashes($_POST['eessage']));
+$Message = Trim(stripslashes($_POST['message']));
 
 // validation
 $validationOK=true;
