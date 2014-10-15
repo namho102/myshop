@@ -9,7 +9,15 @@
     
     <link href="css/m_styles.css" rel="stylesheet">
     <link href="css/m_responsive.css" rel="stylesheet">
-
+	<!-- map --> 
+	<style>
+      #map_canvas {
+        width: 940px;
+        height: 350px;
+        background-color: #CCC;
+      }
+    </style>
+     <script src="https://maps.googleapis.com/maps/api/js"></script>
     <!-- The HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
    		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -27,7 +35,7 @@
 		            <span class="icon-bar"></span>
 		        </button>
 
-				<a class="brand" href="index.html">Tưng Shop</a>
+				<a class="brand" href="#">Tưng Shop</a>
 
 				<div class="nav-collapse collapse">
 					<ul class="nav pull-right">
@@ -47,8 +55,8 @@
 		<div class="contact page">
 
 			<div class="row hidden-phone">
-				<div class="map span12">
-					<img class="img-polaroid" src="img/map.png" alt="This is where we are">
+				<div class="map span12" id="map_canvas">
+					<!-- <img class="img-polaroid" src="img/map.png" alt="This is where we are"> -->
 				</div>
 			</div>
 
@@ -128,5 +136,14 @@
 <script src="js/jquery.js"></script>
 <script src="js/bootstrap-transition.js"></script>
 <script src="js/bootstrap-collapse.js"></script>
+<script type="text/javascript">
+	var mapCanvas = document.getElementById('map_canvas');
+    var mapOptions = {
+      center: new google.maps.LatLng(16.081017, 108.144683),
+      zoom: 15,
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    }
+    var map = new google.maps.Map(mapCanvas, mapOptions);
+</script>
 </body>
 </html>
