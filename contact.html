@@ -81,23 +81,24 @@
 
 				<div class="contact-form span6">
 					<h4>Contact Form</h4>
-				    <form>
+				    <form method="post"  action="mail/contact.php">
 					    <div class="row">
 						    <label class="span2" for="name">Your Name</label>
-						    <input class="span4" id="name" type="text" placeholder="eg. Nam Hoang">			    	
+						    <input class="span4" id="name" name="name" type="text" placeholder="eg. Nam Hoang">			    	
 					    </div>
 
 					    <div class="row">
 						   	<label class="span2" for="email">Email Adress</label>
-						    <input class="span4" id="email" type="email" placeholder="eg. hoangnam@email.com">
+						    <input class="span4" id="email" name="email" type="email" placeholder="eg. hoangnam@email.com">
 					    </div>
 
 					    <div class="row">
 					    	<label class="span2" for="message">Your Message</label>
-					   		<textarea class="span4" id="message"></textarea>
+					   		<textarea class="span4" id="message" name="message"></textarea>
 					   	</div>
 
 					    <button type="submit" class="btn btn btn-large btn-submit pull-right">Submit</button>
+					    <!-- <input type="submit" value="Submit" class="btn btn btn-large btn-submit pull-right">Submit</input> -->
 					</form>
 				</div>
 			
